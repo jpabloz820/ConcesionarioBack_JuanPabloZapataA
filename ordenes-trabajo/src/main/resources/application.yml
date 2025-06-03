@@ -1,0 +1,12 @@
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+spring:
+  config:
+    activate:
+      on-profile: local
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
