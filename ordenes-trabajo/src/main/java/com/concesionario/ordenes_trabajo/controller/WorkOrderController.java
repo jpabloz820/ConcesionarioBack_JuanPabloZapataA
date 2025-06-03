@@ -27,8 +27,14 @@ public class WorkOrderController {
     }
 
     @GetMapping("/vehicle/{vehicleId}")
-    public List<WorkOrder> listByVehicle(@PathVariable Long vehicleId) {
-        return workOrderService.getByVehicle(vehicleId);
+    public ResponseEntity<List<WorkOrder>> listByVehicle(@PathVariable Long vehicleId) {
+        List<WorkOrder> orders = workOrderService.getByVehicle(vehicleId);
+
+        if (orders == null || orders.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        return ResponseEntity.ok(orders);
     }
 
     @PutMapping("/{orderId}/finalize")

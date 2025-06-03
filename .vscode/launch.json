@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-OrdenesTrabajoApplication<ordenes-trabajo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.concesionario.ordenes_trabajo.OrdenesTrabajoApplication",
+            "projectName": "ordenes-trabajo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
