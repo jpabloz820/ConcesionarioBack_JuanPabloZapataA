@@ -1,10 +1,7 @@
 package com.concesionario.ordenes_trabajo.entity;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.Id;
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
